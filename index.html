@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Tip Calculator App</title>
+</head>
+<body>
+  <h1>Spli <br> tter</h1>
+
+  <main>
+    <section class="section-calculator">
+      <form action="">
+        <div class="tip-input">
+          <label for="bill">Bill</label>
+          <input type="text" name="bill" id="bill" placeholder="0" autocomplete="off" maxlength="6">
+        </div>
+
+        <h2>Select Tip %</h2>
+        <div class="tip-porcentage">
+          <button class="btn-tip tip-5">5%</button>
+          <button class="btn-tip tip-10">10%</button>
+          <button class="btn-tip tip-15">15%</button>
+          <button class="btn-tip tip-25">25%</button>
+          <button class="btn-tip tip-50">50%</button>
+          <input type="text" placeholder="Custom" id="custom-tip" autocomplete="off" maxlength="2">
+        </div>
+
+        <div class="tip-input">
+          <div>
+            <label for="number-people">Number of People</label>
+          </div>
+          <input type="text" name="number-people" id="number-people" placeholder="0" autocomplete="off" maxlength="2">
+        </div>
+      </form>
+    </section>
+
+    <section class="section-result">
+      <div>
+        <div class="result">
+          <div>
+            <h3>Tip Amount</h3>
+            <span>/ person</span>
+          </div>
+          <span class="tip-amount">$0.00</span>
+        </div>
+        <div class="result">
+          <div>
+            <h3>Total</h3>
+            <span>/ person</span>
+          </div>
+          <span class="tip-total">$0.00</span>
+        </div>
+      </div>
+
+      <button class="reset">RESET</button>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
