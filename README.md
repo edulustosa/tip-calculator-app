@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/edulustosa/tip-calculator-app/blob/main/assets/js/main.js)
+- Live Site URL: [Site](https://edulustosa.github.io/tip-calculator-app/)
 
 ## My process
 
