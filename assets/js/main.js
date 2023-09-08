@@ -107,7 +107,6 @@ numberPeopleInput.addEventListener("input", function () {
   
   numberPeople = Number(numberPeopleInput.value);
   if (numberPeople !== 0) {
-    numberPeopleInput.style.border = "";
     setResult();
     const span = document.querySelector(".error");
     span.remove();
