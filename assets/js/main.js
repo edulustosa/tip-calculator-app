@@ -11,8 +11,6 @@ let bill, tip, numberPeople;
 let validReset = false;
 
 billInput.addEventListener("input", function () {
-  limitNumber(this, 6);
-
   this.value = this.value.replace(/[^0-9.]/g, "");
 
   if ((this.value.match(/\./g) || []).length > 1) {
@@ -88,8 +86,6 @@ document.addEventListener("click", (e) => {
 });
 
 customTipInput.addEventListener("input", function () {
-  limitNumber(this, 2);
-
   for (let i of buttons) {
     i.id = "";
   }
@@ -101,13 +97,10 @@ customTipInput.addEventListener("input", function () {
 });
 
 numberPeopleInput.addEventListener("input", function () {
-  limitNumber(this, 2);
-  
   this.value = this.value.replace(/[^0-9]+$/, "");
   
   numberPeople = Number(numberPeopleInput.value);
   if (numberPeople !== 0) {
-    numberPeopleInput.style.border = "3px solid var(--primary)";
     setResult();
     const span = document.querySelector(".error");
     span.remove();
@@ -115,12 +108,6 @@ numberPeopleInput.addEventListener("input", function () {
     setError();
   }
 });
-
-function limitNumber(element, maxDigit) {
-  if (element.value.length > maxDigit) {
-    element.value = element.value.slice(0, maxDigit);
-  }
-}
 
 function setResult() {
   if (bill && tip && numberPeople) {
