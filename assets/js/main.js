@@ -94,31 +94,23 @@ customTipInput.addEventListener("input", function () {
     i.id = "";
   }
 
-  this.value = this.value.replace(/[^0-9.]/g, "");
-
-  if ((this.value.match(/\./g) || []).length > 1) {
-    this.value = this.value.substring(0, this.value.lastIndexOf("."));
-  }
+  this.value = this.value.replace(/[^0-9]+$/, "");
 
   tip = Number(customTipInput.value / 100);
   setResult();
 });
 
 numberPeopleInput.addEventListener("input", function () {
-  const span = document.querySelector(".error");
   limitNumber(this, 2);
-
-  this.value = this.value.replace(/[^0-9.]/g, "");
-
-  if ((this.value.match(/\./g) || []).length > 1) {
-    this.value = this.value.substring(0, this.value.lastIndexOf("."));
-  }
-
+  
+  this.value = this.value.replace(/[^0-9]+$/, "");
+  
   numberPeople = Number(numberPeopleInput.value);
   if (numberPeople !== 0) {
-    span.remove();
     numberPeopleInput.style.border = "3px solid var(--primary)";
     setResult();
+    const span = document.querySelector(".error");
+    span.remove();
   } else {
     setError();
   }
