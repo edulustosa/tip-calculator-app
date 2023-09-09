@@ -104,6 +104,7 @@ numberPeopleInput.addEventListener("input", function () {
     setResult();
     const span = document.querySelector(".error");
     span.remove();
+    numberPeopleInput.style.border = "";
   } else {
     setError();
   }
