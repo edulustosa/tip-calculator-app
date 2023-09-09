@@ -102,9 +102,9 @@ numberPeopleInput.addEventListener("input", function () {
   numberPeople = Number(numberPeopleInput.value);
   if (numberPeople !== 0) {
     setResult();
+    numberPeopleInput.style.border = "";
     const span = document.querySelector(".error");
     span.remove();
-    numberPeopleInput.style.border = "";
   } else {
     setError();
   }
